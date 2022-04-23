@@ -1,0 +1,447 @@
+
+// data = [
+//   {
+//     hour: "10:00 am",
+//     temp: "40 "
+//   },
+//   {
+//     hour: "10:00 am",
+//     temp: "40 "
+//   },
+//   {
+//     hour: "10:00 am",
+//     temp: "40 "
+//   },
+//   {
+//     hour: "10:00 am",
+//     temp: "40 "
+//   },
+//   {
+//     hour: "10:00 am",
+//     temp: "40 "
+//   }
+// ]
+
+// render(){
+//   return (
+//     <View style={styles.container}>
+//         <View style={styles.headerBox}>
+    
+//         </View>
+//         <View style={styles.firstBox}>
+//            <View style={styles.firstBoxof1}>
+    
+//            </View>
+//            <View style={styles.firstBoxof2}>
+    
+//            </View>
+//            <View style={styles.firstBoxof3}>
+    
+//            </View>
+//         </View>
+
+//        <FlatList
+//            style={styles.secondBox}
+//            data={data}
+//            horizontal={true}
+//            renderItem={({item}) => <HourlyUpdate hour={item.hour} temp={item.temp}/>}
+//        />
+        
+//         <ScrollView style={styles.thirdBox}>
+//              <DailyUpdate 
+//                day = {"Monday"} 
+//                tempUpper={"33\u00B0 C"} 
+//                tempLower={"3\u00B0 C"}
+//              />
+//              <DailyUpdate
+//                day = {"Monday"} 
+//                tempUpper={"33\u00B0 C"} 
+//                tempLower={"3\u00B0 C"}
+//              />
+//              <DailyUpdate 
+//                day = {"Monday"} 
+//                tempUpper={"33\u00B0 C"} 
+//                tempLower={"3\u00B0 C"}
+//              />
+//              <DailyUpdate  
+//                day = {"Monday"} 
+//                tempUpper={"33\u00B0 C"} 
+//                tempLower={"3\u00B0 C"}
+//              />
+//              <DailyUpdate 
+//                day = {"Monday"} 
+//                tempUpper={"33\u00B0 C"} 
+//                tempLower={"3\u00B0 C"}
+//              />
+//              <DailyUpdate 
+//                day = {"Monday"} 
+//                tempUpper={"33\u00B0 C"} 
+//                tempLower={"3\u00B0 C"}
+//              />
+             
+//         </ScrollView>
+//     </View>
+//  )
+// }
+
+// }
+// const styles=StyleSheet.create({
+// container:{
+//    flex:1,
+//    backgroundColor:"white",
+// },
+// headerBox:{
+//    flex:1,
+//    //height:1,
+//    borderWidth:1, 
+//    backgroundColor:"white",
+
+// },
+// firstBox:{
+//   flex:2,
+//    backgroundColor:"white",
+//    borderWidth:1, 
+// },
+// secondBox:{
+//   flex:1,
+//   backgroundColor:"white",
+//   borderWidth:1,
+//   flexDirection:"row",
+//   // alignItems: "center",
+//   // justifyContent: "space-around"
+// },
+// thirdBox:{
+//    flex:2,
+//    backgroundColor:"white",
+//    borderWidth:1,
+// }
+// })
+
+
+
+
+
+
+
+// <ScrollView style={styles.secondBox} horizontal={true}>
+//               <HourlyUpdate hour = {"11:00 am"} temp={"15\u00B0 C"}/>
+//               <HourlyUpdate hour = {"12:00 am"} temp={"15\u00B0 C"}/>
+//               <HourlyUpdate hour = {"1:00 pm"} temp={"15\u00B0 C"}/>
+//               <HourlyUpdate hour = {"2:00 pm"} temp={"15\u00B0 C"}/>
+//               <HourlyUpdate hour = {"3:00 pm"} temp={"15\u00B0 C"}/>
+//               <HourlyUpdate hour = {"4:00 pm"} temp={"15\u00B0 C"}/>
+//               <HourlyUpdate hour = {"5:00 pm"} temp={"15\u00B0 C"}/>
+//               <HourlyUpdate hour = {"6:00 pm"} temp={"15\u00B0 C"}/>
+//               <HourlyUpdate hour = {"7:00 pm"} temp={"15\u00B0 C"}/>
+//               <HourlyUpdate hour = {"8:00 pm"} temp={"15\u00B0 C"}/>
+//          </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from "react";
+
+// import {
+//     View,
+//     Text,
+//     Button,
+//     Image,
+//     StyleSheet,
+//     TouchableOpacity, Alert,
+// } from "react-native";
+
+// import { useState, useEffect } from "react";
+
+// const styles = StyleSheet.create({
+//     box: {
+//         flex: 1,
+//         borderBottomColor: "black",
+//         borderWidth: 5,
+//         borderBottomWidth: 0,
+//         borderTopWidth: 0,
+//     },
+//     button: {
+//         alignItems: "center",
+//         padding: 10,
+//     },
+//     img: {
+//         height: 100,
+//         width: 100,
+//         marginTop: 40,
+//     },
+// });
+
+// export default function App() {
+//     const buttonPressed = (id) => {
+//         markIt(id);
+//         toggleMark();
+
+//         // TODO
+//         // 1) compute a random 0 -- 9 which isn't already marked
+
+
+//         let index = getRandom();
+//         while(board[index] !== -1){
+//             index = getRandom();
+//         }
+//         // 2) mark it at that index
+//         markIt(index);
+//         // 3) toggle the mark
+//         toggleMark();
+//     }
+//     const getRandom = () => {
+//         return Math.floor(Math.random() * 9);
+//     }
+//     const toggleMark = () => {
+//         if(mark === 1){
+//             mark = 0;
+//         } else {
+//             mark = 1;
+//         }
+//     }
+
+//     const markIt = (id) => {
+//         const tempBoard = board;
+//         tempBoard[id] = mark;
+//         setBoard(tempBoard);
+//     }
+
+//     const Box = (props) => {
+//         const [state, setState] = useState(board[props.id]);
+//         return (
+//             <View style={styles.box}>
+//                 <Text>{state}</Text>
+//                 <TouchableOpacity
+//                     style={styles.button}
+//                     onPress={() => {
+//                         setState(mark);
+//                         buttonPressed(props.id);
+//                     }}
+//                 >
+//                     <Image source={img[board[props.id]]} style={styles.img} />
+//                 </TouchableOpacity>
+//             </View>
+//         )
+//     }
+
+//     // Init
+//     const img = [require("./images/o.jpg"), require("./images/x.jpg")];
+//     const [board, setBoard] = useState([-1,-1,-1,-1,-1,-1,-1,-1,-1]);
+//     let mark = -1;
+
+//     // Get mark from user
+//     const getMark = () => {
+//         Alert.alert(
+//             "Choose your mark",
+//             "",
+//             [
+//                 {
+//                     text: "X",
+//                     onPress: () => {
+//                         mark = 1;
+//                     },
+//                 },
+//                 {
+//                     text: "O",
+//                     onPress: () => {
+//                         mark = 0;
+//                     },
+//                 },
+//             ],
+//             { cancelable: false }
+//         );
+//     };
+
+//     getMark();
+
+//     //random machine input after every user input making sure user input is not overwritten
+
+//     function computerInput() {
+//         let x = Math.floor(Math.random() * 9);
+//         // markIt(x);
+//     }
+
+//     function check() {
+//         if (x1 === x2 && x1 === x3 && x1 !== null) {
+//             if (x1 === 0) {
+//                 alert("Congratulations X! You Win");
+//                 reset();
+//             } else {
+//                 alert("Congratulations O! You Win");
+//                 reset();
+//             }
+//         } else if (x4 === x5 && x4 === x6 && x4 !== null) {
+//             if (x4 === 0) {
+//                 alert("Congratulations X! You Win");
+//                 reset();
+//             } else {
+//                 alert("Congratulations O! You Win");
+//                 reset();
+//             }
+//         } else if (x7 === x8 && x7 === x9 && x7 !== null) {
+//             if (x7 === 0) {
+//                 alert("Congratulations X! You Win");
+//                 reset();
+//             } else {
+//                 alert("Congratulations O! You Win");
+//                 reset();
+//             }
+//         } else if (x1 === x4 && x1 === x7 && x1 !== null) {
+//             if (x1 === 0) {
+//                 alert("Congratulations X! You Win");
+//                 reset();
+//             } else {
+//                 alert("Congratulations O! You Win");
+//                 reset();
+//             }
+//         } else if (x2 === x5 && x2 === x8 && x2 !== null) {
+//             if (x2 === 0) {
+//                 alert("Congratulations X! You Win");
+//                 reset();
+//             } else {
+//                 alert("Congratulations O! You Win");
+//                 reset();
+//             }
+//         } else if (x3 === x6 && x3 === x9 && x3 !== null) {
+//             if (x3 === 0) {
+//                 alert("Congratulations X! You Win");
+//                 reset();
+//             } else {
+//                 alert("Congratulations O! You Win");
+//                 reset();
+//             }
+//         } else if (x1 === x5 && x1 === x9 && x1 !== null) {
+//             if (x1 === 0) {
+//                 alert("Congratulations X! You Win");
+//                 reset();
+//             } else {
+//                 alert("Congratulations O! You Win");
+//                 reset();
+//             }
+//         } else if (x3 === x5 && x3 === x7 && x3 !== null) {
+//             if (x3 === 0) {
+//                 alert("Congratulations X! You Win");
+//                 reset();
+//             } else {
+//                 alert("Congratulations O! You Win");
+//                 reset();
+//             }
+//         } else if (
+//             x1 !== null &&
+//             x2 !== null &&
+//             x3 !== null &&
+//             x4 !== null &&
+//             x5 !== null &&
+//             x6 !== null &&
+//             x7 !== null &&
+//             x8 !== null &&
+//             x9 !== null
+//         ) {
+//             alert("Game Drawn");
+//             reset();
+//         }
+//     }
+
+//     return (
+//         <View style={{ flex: 1 }}>
+//             <View style={{ flex: 1, justifyContent: "center" }}>
+//                 <Text
+//                     style={{
+//                         fontSize: 30,
+//                         fontWeight: "bold",
+//                     }}
+//                 >
+//                     Choose your mark below to place on the screen
+//                 </Text>
+//             </View>
+//             <View style={{ flex: 2, backgroundColor: "skyblue" }}>
+//                 <View
+//                     style={{
+//                         flex: 1,
+//                         borderColor: "black",
+//                         borderWidth: 5,
+//                         flexDirection: "row",
+//                     }}
+//                 >
+//                     <Box id = {0} state = {board[0]}/>
+//                     <Box id = {1} />
+//                     <Box id = {2} />
+//                 </View>
+//                 <View
+//                     style={{
+//                         flex: 1,
+//                         borderColor: "black",
+//                         borderWidth: 5,
+//                         flexDirection: "row",
+//                     }}
+//                 >
+//                     <Box id = {3} />
+//                     <Box id = {4} />
+//                     <Box id = {5} />
+//                 </View>
+//                 <View
+//                     style={{
+//                         flex: 1,
+//                         borderColor: "black",
+//                         borderWidth: 5,
+//                         flexDirection: "row",
+//                     }}
+//                 >
+//                     <Box id = {6} />
+//                     <Box id = {7} />
+//                     <Box id = {8} />
+//                 </View>
+//             </View>
+
+//             <View
+//                 style={{
+//                     flex: 1,
+//                     flexDirection: "row",
+//                     justifyContent: "space-around",
+//                 }}
+//             >
+//                 <View style={{ justifyContent: "center", marginLeft: 80 }}>
+//                     <Button title="Reset" onPress={() => reset()} />
+//                 </View>
+
+//             </View>
+//         </View>
+
+//     );
+// }
